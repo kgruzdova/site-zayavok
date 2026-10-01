@@ -81,7 +81,7 @@ form?.addEventListener('submit', async (event) => {
   delete payload.consent;
 
   try {
-    const response = await fetch('https://formsubmit.co/ajax/matisa_kz@mail.ru', {
+    const response = await fetch('https://formsubmit.co/ajax/ksugrukz@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
