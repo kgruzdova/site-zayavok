@@ -62,7 +62,8 @@ function validateForm() {
   return valid;
 }
 
-form?.addEventListener('submit', (event) => {
+form?.addEventListener('submit', async (event) => {
+  event.preventDefault();
   const status = form.querySelector('.form-status');
   status.textContent = '';
 
@@ -75,6 +76,29 @@ form?.addEventListener('submit', (event) => {
   const submitButton = form.querySelector('button[type="submit"]');
   submitButton.disabled = true;
   submitButton.querySelector('span').textContent = 'ОТПРАВЛЯЕМ…';
+
+  const payload = Object.fromEntries(new FormData(form).entries());
+  delete payload.consent;
+
+  try {
+    const response = await fetch('https://formsubmit.co/ajax/matisa_kz@mail.ru', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || result.success === false || result.success === 'false') {
+      throw new Error(result.message || 'Не удалось отправить заявку');
+    }
+    window.location.assign(new URL('success.html', window.location.href).href);
+  } catch (error) {
+    status.textContent = 'Не удалось отправить заявку. Проверьте активацию FormSubmit и попробуйте ещё раз.';
+    submitButton.disabled = false;
+    submitButton.querySelector('span').textContent = 'ОТПРАВИТЬ ЗАЯВКУ';
+  }
 });
 
 form?.querySelectorAll('input').forEach((input) => {
