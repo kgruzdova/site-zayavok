@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Оставьте заявку на подключение услуг «Фридом» — специалист свяжется с вами в ближайшее время." />
+    <title>ФРИДОМ-ПОДКЛЮЧЕНИЕ</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Фридом — на главную">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img">
+            <path d="M24 4 41 14v20L24 44 7 34V14L24 4Z" fill="none" stroke="currentColor" stroke-width="3" />
+            <path d="M17 31V17h15M17 24h11" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>ФРИДОМ</strong>
+          <span>подключение</span>
+        </span>
+      </a>
+      <div class="header-note"><span class="status-dot" aria-hidden="true"></span>Поможем разобраться</div>
+    </header>
+
+    <main>
+      <section class="hero shell">
+        <div class="hero-copy">
+          <p class="eyebrow">ПОДКЛЮЧЕНИЕ УСЛУГ</p>
+          <h1>Подключение услуг «Фридом» начинается <span>с одной заявки</span></h1>
+          <p class="hero-lead">Заполните короткую форму — специалист свяжется с вами в самое ближайшее время и ответит на вопросы.</p>
+
+          <div class="hero-points" aria-label="Преимущества">
+            <div class="point"><span class="point-number">01</span><span>Без долгого поиска информации</span></div>
+            <div class="point"><span class="point-number">02</span><span>Персональная консультация специалиста</span></div>
+            <div class="point"><span class="point-number">03</span><span>Проверка номера перед отправкой</span></div>
+          </div>
+        </div>
+
+        <div class="form-card" id="form-card">
+          <div class="form-card-top">
+            <div>
+              <p class="card-kicker">ШАГ 1 ИЗ 1</p>
+              <h2>Получите консультацию</h2>
+            </div>
+            <span class="form-icon" aria-hidden="true">↗</span>
+          </div>
+          <p class="form-intro">Укажите имя и номер телефона. Если хотите получить копию заявки, добавьте email.</p>
+
+          <form id="lead-form" action="https://formsubmit.co/matisa_kz@mail.ru" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Новая заявка на подключение «Фридом»" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://kgruzdova.github.io/site-zayavok/success.html" />
+            <input type="hidden" name="_cc" id="client-copy" value="" />
+            <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <label class="field">
+              <span>Ваше имя</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Например, Анна" required minlength="2" />
+              <small class="field-error" data-error-for="name"></small>
+            </label>
+
+            <label class="field">
+              <span>Номер телефона</span>
+              <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required />
+              <small class="field-error" data-error-for="phone"></small>
+            </label>
+
+            <label class="field">
+              <span>Email для копии заявки <em>(необязательно)</em></span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@example.com" />
+              <small class="field-error" data-error-for="email"></small>
+            </label>
+
+            <label class="consent-field">
+              <input type="checkbox" name="consent" required />
+              <span>Соглашаюсь на обработку персональных данных согласно <a href="privacy.html">политике конфиденциальности</a>.</span>
+            </label>
+            <small class="field-error consent-error" data-error-for="consent"></small>
+
+            <button class="submit-button" type="submit">
+              <span>ОТПРАВИТЬ ЗАЯВКУ</span>
+              <span class="button-arrow" aria-hidden="true">→</span>
+            </button>
+            <p class="privacy-note">Проверьте номер телефона перед отправкой — специалист свяжется с вами по указанным контактам.</p>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="details shell" aria-label="Как это помогает">
+        <div class="section-heading">
+          <p class="eyebrow">ПОЧЕМУ ОТКЛАДЫВАЮТ</p>
+          <h2>Подключение не должно превращаться в отдельное дело</h2>
+        </div>
+        <div class="details-grid">
+          <article class="detail-card problem-card">
+            <span class="detail-label">01 / СОМНЕНИЯ</span>
+            <h3>Не знаете, какие условия подойдут именно вам</h3>
+            <p>Не нужно разбираться во всех деталях самостоятельно — специалист поможет сориентироваться.</p>
+          </article>
+          <article class="detail-card problem-card">
+            <span class="detail-label">02 / ПОИСК</span>
+            <h3>Приходится искать информацию по разным источникам</h3>
+            <p>Оставьте контакты один раз и получите ответы напрямую, без долгого поиска.</p>
+          </article>
+          <article class="detail-card solution-card">
+            <span class="detail-label">03 / РЕШЕНИЕ</span>
+            <h3>Короткая форма — быстрый следующий шаг</h3>
+            <p>Проверка номера снижает риск ошибки, а консультация помогает понять, что делать дальше.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta shell">
+        <div>
+          <p class="eyebrow">ГОТОВЫ НАЧАТЬ?</p>
+          <h2>Чем раньше вы отправите заявку, тем раньше специалист сможет вам помочь.</h2>
+        </div>
+        <a class="outline-button" href="#form-card">ОСТАВИТЬ ЗАЯВКУ <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <span>© 2026 ФРИДОМ-ПОДКЛЮЧЕНИЕ</span>
+      <span>Свяжемся по указанному номеру</span>
+      <a class="footer-link" href="privacy.html">Политика конфиденциальности</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
